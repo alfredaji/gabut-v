@@ -35,7 +35,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
   if (now < global.db.data.users[hl[0]].bannedDate) global.db.data.users[hl[0]].bannedDate += jumlahHari
   else global.db.data.users[hl[0]].bannedDate = now + jumlahHari
   conn.reply(m.chat,`*TERBANNED*\n\nKamu di banned *@${hl[0].split('@')[0]}* selama *${hl[1]} hari*.\n\n*Banned : ${msToDate(global.db.data.users[hl[0]].bannedDate - now)}*`,m,{ contextInfo: { mentionedJid: [hl[0]] } })
-  conn.reply(hl[0],`*TERBANNED*\n\nKamu di banned *@${hl[0].split('@')[0]}* selama *${hl[1]} hari*.\n\n*Banned : ${msToDate(global.db.data.users[hl[0]].bannedDate - now)}*`,m,{ contextInfo: { mentionedJid: [hl[0]] } }) 
+  conn.reply(hl[0],`*TERBANNED*\n\nKamu di banned Makanya bikin bot sendiri *@${hl[0].split('@')[0]}* selama *${hl[1]} hari*.\n\n*Banned : ${msToDate(global.db.data.users[hl[0]].bannedDate - now)}*`,m,{ contextInfo: { mentionedJid: [hl[0]] } }) 
 
 }
 handler.help = ['ban *@tag|days*']
